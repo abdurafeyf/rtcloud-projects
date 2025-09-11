@@ -11,7 +11,7 @@ import json
 from tqdm import tqdm
 from scripts import utils_mindeye
 
-from diffusers.models.vae import Decoder
+from diffusers.models.autoencoders.vae import Decoder
 class BrainNetwork(nn.Module):
     def __init__(self, h=4096, in_dim=15724, out_dim=768, seq_len=2, n_blocks=4, drop=.15, clip_size=768, blurry_recon=True, clip_scale=1):
         super().__init__()
